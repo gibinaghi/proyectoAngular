@@ -2,4 +2,13 @@
 <p>Apellido del empleado: {{ apellido }}</p>
 <!--<p>Edad del empleado: {{ getEdad() + 10 }}</p>-->
 <p>Edad del empleado: {{ edad<18 ? "Es menor de edad": "Es mayor de edad" }}</p>
-<p>Empresa del empleado: {{ empresa }}</p>
+<p>Empresa del empleado: {{ empresa.value }}</p>
+Introduce la empresa <input type="text" #empresa>
+<br/>
+<br/>
+<input type="button" value="Cambiar empresa" (click)="llamaEmpresa(empresa.value)">
+<p>Dirección del empleado: {{ direccion.value }}</p>
+<!--creo el binding para conectar con el property creado en Typescript-->
+Introduce la dirección <input type="text" #direccion (keyup)="0" [disabled]="habilitacionCuadro">
+<br/>
+<br/>

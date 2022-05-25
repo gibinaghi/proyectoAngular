@@ -13,12 +13,18 @@ export class EmpleadoComponent implements OnInit {
   apellido="Binaghi";
   //private edad=22;
   edad=32;
-  empresa="Google";
+  //empresa="Google";
 
   /*getEdad(){
     return this.edad;
   }*/
 
+  llamaEmpresa(value:String){
+    
+  }
+
+  //creo el property binding
+  habilitacionCuadro=false;
 
   constructor() { }
 
