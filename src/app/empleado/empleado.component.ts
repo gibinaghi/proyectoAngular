@@ -19,12 +19,34 @@ export class EmpleadoComponent implements OnInit {
     return this.edad;
   }*/
 
+
   llamaEmpresa(value:String){
     
   }
 
+
   //creo el property binding
   habilitacionCuadro=false;
+  usuRegistrado = false;
+  textoDeRegistro="No hay nadie registrado";
+
+
+  getResgistrarUsuario() {
+    this.usuRegistrado = false;
+  }
+
+
+  //función que realiza la acción del event
+  setusuarioRegistrado(event:Event){
+    //alert("El usuarios se ha registrado");
+    
+    if((<HTMLInputElement>event.target).value=="si"){
+      this.textoDeRegistro="El usuario se acaba de registrar";
+    } else {
+      this.textoDeRegistro="No hay nadie registrado";
+    }
+  }
+
 
   constructor() { }
 

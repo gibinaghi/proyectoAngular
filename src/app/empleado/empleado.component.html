@@ -8,7 +8,15 @@ Introduce la empresa <input type="text" #empresa>
 <br/>
 <input type="button" value="Cambiar empresa" (click)="llamaEmpresa(empresa.value)">
 <p>Dirección del empleado: {{ direccion.value }}</p>
+
 <!--creo el binding para conectar con el property creado en Typescript-->
 Introduce la dirección <input type="text" #direccion (keyup)="0" [disabled]="habilitacionCuadro">
 <br/>
 <br/>
+
+<!--interpolación-->
+{{textoDeRegistro}}
+<br/>
+Registrado: <input type="radio" value="si" name="nRegistro" id="registro" [checked]="usuRegistrado" (click)="setusuarioRegistrado($event)"> <br/>
+No registrado <input type="radio" value="no" name="nRegistro" (click)="setusuarioRegistrado($event)">
+{{getResgistrarUsuario()}}
